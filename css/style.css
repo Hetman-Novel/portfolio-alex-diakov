@@ -1321,6 +1321,11 @@ h6 {
   transform: rotate(0deg);
 }
 
+.block._init .block__title._active:before,
+.block._init .block__title._active:after {
+  transform: rotate(180deg);
+}
+
 /* n Pop up */
 
 /* n Classes */
@@ -1553,6 +1558,10 @@ a {
   z-index: 100;
 }
 
+.header.n_hidden .header__wrapper {
+  transform: translateY(-110%);
+}
+
 .header.n_scroll .header__wrapper {
   background: #fff;
   box-shadow: 0px 3px 8px rgba(144, 145, 156, 0.06);
@@ -1604,7 +1613,7 @@ a {
   background-color: transparent;
   left: 0;
   position: fixed;
-  transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s, transform 0.6s;
   top: 0;
   width: 100%;
   z-index: 50;
@@ -2552,12 +2561,33 @@ body._touch .header .menu__list > li._active .menu__arrow {
   border-radius: 50%;
   box-shadow: 0 3.66443px 6.41275px rgba(0, 0, 0, 0.25);
   left: 0;
-  height: 941.89px;
   position: absolute;
   transform: translate(-65%, -50%);
   top: 50%;
-  width: 941.89px;
   z-index: 0;
+}
+
+.wrap-testimonials-companies__circle.n_animation {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.wrap-testimonials-companies__circle.n_animation::before {
+  height: 0;
+  transition-delay: 0.3s;
+  width: 0;
+}
+
+.wrap-testimonials-companies__circle.n_animation.n_play-animation {
+  height: 941.89px;
+  opacity: 1;
+  width: 941.89px;
+}
+
+.wrap-testimonials-companies__circle.n_animation.n_play-animation::before {
+  height: 716.49px;
+  width: 716.49px;
 }
 
 .wrap-testimonials-companies__circle::before {
@@ -2566,16 +2596,22 @@ body._touch .header .menu__list > li._active .menu__arrow {
   box-shadow: 0 3.77164px 6.60037px rgba(0, 0, 0, 0.25);
   content: "";
   left: 50%;
-  height: 716.49px;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
-  width: 716.49px;
 }
 
 .testimonials .n_text-above-sec-title {
   color: #ECECEC;
   margin-bottom: 15px;
+}
+
+.testimonials .n_text-above-sec-title.n_animation {
+  opacity: 0;
+}
+
+.testimonials .n_text-above-sec-title.n_animation.n_play-animation {
+  opacity: 1;
 }
 
 .testimonials .n_text-above-sec-title::after {
@@ -2591,6 +2627,14 @@ body._touch .header .menu__list > li._active .menu__arrow {
   color: #DCDCDC;
 }
 
+.testimonials .n_sec-title.n_animation {
+  opacity: 0;
+}
+
+.testimonials .n_sec-title.n_animation.n_play-animation {
+  opacity: 1;
+}
+
 .testimonials .n_sec-title span {
   display: table;
   color: #9690A2;
@@ -2603,6 +2647,22 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 .testimonials__slider {
   overflow: hidden;
+}
+
+.testimonials__tag.n_animation,
+.testimonials__block-text.n_animation,
+.testimonials__name.n_animation,
+.testimonials__position.n_animation,
+.testimonials__wrap-counter-arrows.n_animation {
+  opacity: 0 !important;
+}
+
+.testimonials__tag.n_animation.n_play-animation,
+.testimonials__block-text.n_animation.n_play-animation,
+.testimonials__name.n_animation.n_play-animation,
+.testimonials__position.n_animation.n_play-animation,
+.testimonials__wrap-counter-arrows.n_animation.n_play-animation {
+  opacity: 1 !important;
 }
 
 .testimonials__tag {
@@ -2741,6 +2801,14 @@ body._touch .header .menu__list > li._active .menu__arrow {
   margin-bottom: 15px;
 }
 
+.companies .n_text-above-sec-title.n_animation {
+  opacity: 0;
+}
+
+.companies .n_text-above-sec-title.n_animation.n_play-animation {
+  opacity: 1;
+}
+
 .companies .n_text-above-sec-title::after {
   background-color: rgba(150, 144, 162, 0.65);
   content: "";
@@ -2754,9 +2822,27 @@ body._touch .header .menu__list > li._active .menu__arrow {
   color: #DCDCDC;
 }
 
+.companies .n_sec-title.n_animation {
+  opacity: 0;
+}
+
+.companies .n_sec-title.n_animation.n_play-animation {
+  opacity: 1;
+}
+
 .companies__items {
   position: relative;
   z-index: 1;
+}
+
+.companies__item-content.n_animation {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.companies__item-content.n_animation.n_play-animation {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .companies__item-content p {
@@ -2795,6 +2881,39 @@ body._touch .header .menu__list > li._active .menu__arrow {
   overflow: hidden;
 }
 
+.diplomas-sertificate__item.n_animation {
+  opacity: 0;
+  position: relative;
+  top: 50px;
+}
+
+.diplomas-sertificate__item.n_animation.n_play-animation {
+  opacity: 1;
+  top: 0;
+}
+
+.diplomas-sertificate__item.n_animation:nth-child(1) {
+  transition: top 0.6s ease 0.4s, opacity 0.6s ease 0.4s;
+}
+
+.diplomas-sertificate__item.n_animation:nth-child(2) {
+  transition: top 0.6s ease 0.8s, opacity 0.6s ease 0.8s;
+}
+
+.diplomas-sertificate__item.n_animation:nth-child(3) {
+  transition: top 0.6s ease 1.2s, opacity 0.6s ease 1.4s;
+}
+
+.diplomas-sertificate__item-top-content.n_animation {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+.diplomas-sertificate__item-top-content.n_animation.n_play-animation {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .diplomas-sertificate__item-top-content p {
   color: #292929;
 }
@@ -2802,6 +2921,14 @@ body._touch .header .menu__list > li._active .menu__arrow {
 .diplomas-sertificate .n_text-above-sec-title {
   color: #161519;
   margin-bottom: 15px;
+}
+
+.diplomas-sertificate .n_text-above-sec-title.n_animation {
+  opacity: 0;
+}
+
+.diplomas-sertificate .n_text-above-sec-title.n_animation.n_play-animation {
+  opacity: 1;
 }
 
 .diplomas-sertificate .n_text-above-sec-title::after {
@@ -2817,9 +2944,28 @@ body._touch .header .menu__list > li._active .menu__arrow {
   color: #161519;
 }
 
+.diplomas-sertificate .n_sec-title.n_animation {
+  opacity: 0;
+}
+
+.diplomas-sertificate .n_sec-title.n_animation.n_play-animation {
+  opacity: 1;
+}
+
 .diplomas-sertificate__blockImage {
   overflow: hidden;
   padding-bottom: calc(74% - 2px);
+}
+
+.diplomas-sertificate .wrap-post-pagination.n_animation {
+  opacity: 0;
+  transition: transform 0.6s ease 1.5s, opacity 0.6s ease 1.5s;
+  transform: translateX(-5%);
+}
+
+.diplomas-sertificate .wrap-post-pagination.n_animation.n_play-animation {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about-your-project {
@@ -2833,8 +2979,24 @@ body._touch .header .menu__list > li._active .menu__arrow {
   margin-bottom: 19px;
 }
 
+.about-your-project .n_text-above-sec-title.n_animation {
+  opacity: 0;
+}
+
+.about-your-project .n_text-above-sec-title.n_animation.n_play-animation {
+  opacity: 1;
+}
+
 .about-your-project .n_sec-title {
   color: #262626;
+}
+
+.about-your-project .n_sec-title.n_animation {
+  opacity: 0;
+}
+
+.about-your-project .n_sec-title.n_animation.n_play-animation {
+  opacity: 1;
 }
 
 .about-your-project__button {
@@ -2847,6 +3009,16 @@ body._touch .header .menu__list > li._active .menu__arrow {
   line-height: 24px;
   padding: 12px 20px;
   transition: all 0.3s ease 0s;
+}
+
+.about-your-project__button.n_animation {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+.about-your-project__button.n_animation.n_play-animation {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-your-project__button span {
@@ -2865,6 +3037,16 @@ body._touch .header .menu__list > li._active .menu__arrow {
   color: #111111;
   margin-top: 30px;
   padding-top: 30px;
+}
+
+.about-your-project__block-text.n_animation p {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+.about-your-project__block-text.n_animation.n_play-animation p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Page - Single post */
@@ -6002,19 +6184,19 @@ body.dark .wrap-post-pagination .nav-links .page-numbers.current {
     padding-top: calc(61px + 37 * ((100vw - 320px) / 1083));
   }
 
-  .wrap-testimonials-companies__circle {
+  .wrap-testimonials-companies__circle.n_animation.n_play-animation {
     height: calc(450px + 491.89 * ((100vw - 320px) / 1083));
   }
 
-  .wrap-testimonials-companies__circle {
+  .wrap-testimonials-companies__circle.n_animation.n_play-animation {
     width: calc(450px + 491.89 * ((100vw - 320px) / 1083));
   }
 
-  .wrap-testimonials-companies__circle::before {
+  .wrap-testimonials-companies__circle.n_animation.n_play-animation::before {
     height: calc(316.49px + 400 * ((100vw - 320px) / 1083));
   }
 
-  .wrap-testimonials-companies__circle::before {
+  .wrap-testimonials-companies__circle.n_animation.n_play-animation::before {
     width: calc(316.49px + 400 * ((100vw - 320px) / 1083));
   }
 
