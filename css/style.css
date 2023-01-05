@@ -7719,7 +7719,7 @@ body.dark .wrap-post-pagination .nav-links .page-numbers.current {
 
 @media screen and (max-width: 960.98px) and (max-width: 1403px) {
   .portfolio-slider {
-    padding-top: calc(90px + 15 * ((100vw - 320px) / 1083));
+    padding-top: calc(110px + -5 * ((100vw - 320px) / 1083));
   }
 
   .portfolio-slider__blockImage {
