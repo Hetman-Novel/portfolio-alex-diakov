@@ -4,8 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230103193523">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230103193523">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230105213305">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230105213305">
    <title>Home</title>
 </head>
 
@@ -513,14 +513,13 @@
                         <div class="wrap-video n_animation">
                            <video class="player" preload="none" crossorigin="" playsinline=""
                               data-poster="images/video-1.png">
-                              <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                 type="video/mp4" size="576">
-                              <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                                 type="video/mp4" size="720">
-                              <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                                 type="video/mp4" size="1080">
-                              <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                 download="">Download</a>
+                              <source src="/files/video/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4"
+                                 size="576">
+                              <source src="/files/video/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4"
+                                 size="720">
+                              <source src="/files/video/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4"
+                                 size="1080">
+                              <a href="/files/video/View_From_A_Blue_Moon_Trailer-576p.mp4" download="">Download</a>
                            </video>
                         </div>
                      </div>
@@ -546,14 +545,13 @@
                         <div class="wrap-video n_animation">
                            <video class="player" preload="none" crossorigin="" playsinline=""
                               data-poster="images/video-2.jpg">
-                              <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                 type="video/mp4" size="576">
-                              <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                                 type="video/mp4" size="720">
-                              <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                                 type="video/mp4" size="1080">
-                              <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                 download="">Download</a>
+                              <source src="/files/video/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4"
+                                 size="576">
+                              <source src="/files/video/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4"
+                                 size="720">
+                              <source src="/files/video/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4"
+                                 size="1080">
+                              <a href="/files/video/View_From_A_Blue_Moon_Trailer-576p.mp4" download="">Download</a>
                            </video>
                         </div>
                      </div>
@@ -580,14 +578,13 @@
                         <div class="wrap-video n_animation">
                            <video class="player" preload="none" crossorigin="" playsinline=""
                               data-poster="images/video-3.png">
-                              <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                 type="video/mp4" size="576">
-                              <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                                 type="video/mp4" size="720">
-                              <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                                 type="video/mp4" size="1080">
-                              <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                                 download="">Download</a>
+                              <source src="/files/video/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4"
+                                 size="576">
+                              <source src="/files/video/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4"
+                                 size="720">
+                              <source src="/files/video/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4"
+                                 size="1080">
+                              <a href="/files/video/View_From_A_Blue_Moon_Trailer-576p.mp4" download="">Download</a>
                            </video>
                         </div>
                      </div>
@@ -1052,10 +1049,9 @@
    </div>
 </footer>
    </div>
-   <script src="files/js/jquery-3.6.1.min.js?_v=20230103193523"></script>
-
-   <script src="js/script.min.js?_v=20230103193523"></script>
-   <script src="files/js/plyr.min.js?_v=20230103193523"></script>
+   <script src="files/js/jquery-3.6.1.min.js?_v=20230105213305"></script>
+   <script src="js/script.min.js?_v=20230105213305"></script>
+   <script src="files/js/plyr.min.js?_v=20230105213305"></script>
    <script>
       if (window.matchMedia("(max-width: 991px)").matches) {
          document.querySelector('.fs-two-item').remove();
@@ -1092,22 +1088,17 @@
             }, 115);
          }
       });
-
-      const player = document.querySelectorAll('.player');
-      if (player) {
-         const players = Array.from(player).map((div) => new Plyr(div));
-      }
    </script>
-   <script src="files/swiper/js/swiper-bundle.min.js?_v=20230103193523"></script>
-   <script src="files/swiper/js/home-slider-swiper-settings.js?_v=20230103193523"></script>
-   <script src="files/js/animation-elements.min.js?_v=20230103193523"></script>
-   <script src="files/js/gsap.min.js?_v=20230103193523"></script>
+   <script src="files/swiper/js/swiper-bundle.min.js?_v=20230105213305"></script>
+   <script src="files/swiper/js/home-slider-swiper-settings.js?_v=20230105213305"></script>
+   <script src="files/js/animation-elements.min.js?_v=20230105213305"></script>
+   <script src="files/js/gsap.min.js?_v=20230105213305"></script>
 
    <!-- data-tilt data-tilt-scale="1.06" data-tilt-max="5" data-tilt-speed="600" data-tilt-perspective="1000" -->
-   <script src="files/js/vanilla-tilt.min.js?_v=20230103193523"></script>
+   <script src="files/js/vanilla-tilt.min.js?_v=20230105213305"></script>
 
-   <script src="files/js/typed/typed.min.js?_v=20230103193523"></script>
-   <script src="files/js/typed/typed-settings.js?_v=20230103193523"></script>
+   <script src="files/js/typed/typed.min.js?_v=20230105213305"></script>
+   <script src="files/js/typed/typed-settings.js?_v=20230105213305"></script>
 
    <script>
       /*var scrollbegin = $("footer").height();
