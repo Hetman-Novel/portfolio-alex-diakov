@@ -14,7 +14,7 @@
    // От кого
    $mail->setFrom('alex-diakov@support.com', 'Поддержка от Alex Diakov');
    // На какой email отправка
-   $mail->addAddress('diakovoleksandr@gmail.com');
+   $mail->addAddress('hetman.novel@gmail.com');
    // Тема письма
    $mail->Subject = 'Письмо с сайта alex-diakov.com';
 
