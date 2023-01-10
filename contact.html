@@ -4,8 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230105213305">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230105213305">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230110211454">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230110211454">
    <title>Contact</title>
 </head>
 
@@ -182,15 +182,41 @@
                   </div>
                </div>
                <div class="contact__item">
-                  <form action="#" class="contact__form">
-                     <label class="contact__label">Name</label>
-                     <input name="contact-name" type="text" class="contact__field" placeholder="Type your name">
-                     <label class="contact__label">Email Address</label>
-                     <input name="contact-email" type="text" class="contact__field" placeholder="Email Address">
-                     <label class="contact__label">Message</label>
-                     <textarea name="contact-message" class="contact__field textarea"
-                        placeholder="Go ahead, I'm listening"></textarea>
-                     <button type="submit" class="contact__submit">Send Massage</button>
+                  <form action="#" id="contact-form" class="contact__form">
+                     <label class="contact__label">Name *</label>
+                     <div class="contact__wrap-field">
+                        <div class="contact__requiredBlock">
+                           <p class="contact__requiredText">Required field</p>
+                        </div>
+                        <input name="contact-name" type="text" class="contact__field _req" placeholder="Type your name">
+                     </div>
+                     <label class="contact__label">Email Address *</label>
+                     <div class="contact__wrap-field">
+                        <div class="contact__requiredBlock">
+                           <p class="contact__requiredText">Required field</p>
+                        </div>
+                        <input name="contact-email" type="text" class="contact__field _req _email"
+                           placeholder="Email Address">
+                     </div>
+                     <label class="contact__label">Message *</label>
+                     <div class="contact__wrap-field">
+                        <div class="contact__requiredBlock">
+                           <p class="contact__requiredText">Required field</p>
+                        </div>
+                        <textarea id="contact-message" name="contact-message" class="contact__field textarea _req"
+                           placeholder="Go ahead, I'm listening"></textarea>
+                     </div>
+                     <div class="contact__checkbox">
+                        <input name="agreement" id="formAgreement" checked type="checkbox"
+                           class="contact__input-checkbox _req">
+                        <label class="contact__checkbox-label" for="formAgreement">
+                           <span>I give my consent to the processing of personal data in accordance with <a href="#">the
+                                 Terms</a> *</span>
+                        </label>
+                     </div>
+                     <button type="submit" class="contact__submit">
+                        <img src="files/load.gif" alt="load">
+                        Send Massage</button>
                   </form>
                </div>
             </div>
@@ -301,8 +327,9 @@
    </div>
 </footer>
    </div>
-   <script src="js/script.min.js?_v=20230105213305"></script>
-   <script src="files/js/gsap.min.js?_v=20230105213305"></script>
+   <script src="files/js/contact-form.js?_v=20230110211454"></script>
+   <script src="js/script.min.js?_v=20230110211454"></script>
+   <script src="files/js/gsap.min.js?_v=20230110211454"></script>
 </body>
 
 </html>
