@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    // Контактная форма
    const contact_form = document.getElementById('contact-form');
+   const send_text_good = document.getElementById('send-text-good');
    contact_form.addEventListener('submit', formSend);
 
    async function formSend(e) {
@@ -14,8 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (error === 0) {
          contact_form.classList.add('_sending');
-
-         let response = await fetch('/files/phpmailer/sendmail.php', {
+         let response = await fetch('sendmail.php', {
             method: 'POST',
             body: formData
          });
@@ -24,9 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
             alert(result.message);
             contact_form.reset();
             contact_form.classList.remove('_sending');
+            send_text_good.classList.add('sendGood');
+            setTimeout(() => {
+               send_text_good.classList.remove('sendGood');
+            }, 3000);
          } else {
             alert('Ошибка');
             contact_form.classList.remove('_sending');
+            send_text_good.classList.remove('sendGood');
          }
       } else {
          //alert('Заполните обязательные поля');
