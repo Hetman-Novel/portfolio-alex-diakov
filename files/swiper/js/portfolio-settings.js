@@ -24,7 +24,7 @@ if (portfolio_slider) {
       slideToClickedSlide: true,
 
       // Автовысота
-      //autoHeight: true,
+      autoHeight: true,
 
       // Количество слайдов для показа
       slidesPerView: 1,
@@ -45,6 +45,13 @@ if (portfolio_slider) {
          crossFade: true
       },
       parallax: true,
+
+      // Работают по принципу мобайл ферст (от меньшего к большему)
+      breakpoints: {
+         961: {
+            autoHeight: false,
+         }
+      },
    });
 }
 /*if (document.querySelectorAll('.testimonials__slide').length > 11) {

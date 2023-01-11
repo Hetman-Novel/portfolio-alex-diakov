@@ -3,8 +3,8 @@
    use PHPMailer\PHPMailer\PHPMailer;
    use PHPMailer\PHPMailer\Exception;
 
-   require 'files/phpmailer/src/Exception.php';
    require 'files/phpmailer/src/PHPMailer.php';
+   require 'files/phpmailer/src/Exception.php';
 
    $mail = new PHPMailer(true);
    $mail->CharSet = 'UTF-8';
@@ -14,7 +14,7 @@
    // От кого
    $mail->setFrom('alex-diakov@support.com', 'Поддержка от Alex Diakov');
    // На какой email отправка
-   $mail->addAddress('hetman.novel@gmail.com');
+   $mail->addAddress('diakovoleksandr@gmail.com');
    // Тема письма
    $mail->Subject = 'Письмо с сайта alex-diakov.com';
 
