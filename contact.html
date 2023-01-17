@@ -4,8 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230112221237">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230112221237">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230117164937">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230117164937">
    <title>Contact</title>
 </head>
 
@@ -16,10 +16,13 @@
 <header class="header">
    <div class="header__wrapper lock-padding">
       <div id="header-container" class="n_container header-container">
-         <button class="header__burger" type="button">
+         <!--<button class="header__burger" type="button">
             <span class="header__burger-line">Burger line</span>
-         </button>
-         <a href="/" class="header__logo">alex diakov</a>
+         </button>-->
+         <a href="/" class="header__logo">
+            <img class="custom-logo" src="images/svg/logo.svg" alt="logo">
+            <span class="header__site-name">alex diakov</span>
+         </a>
          <div class="header__menu menu">
             <nav class="menu__body">
                <div class="menu-topmenu-container">
@@ -54,8 +57,19 @@
                            </li>
                         </ul>
                      </li>
-                     <li class="menu-item">
+                     <li class="menu-item menu-item-has-children">
                         <a class="menu__link" href="servises.html">Servises</a>
+                        <span class="menu__arrow">
+                           <svg width="10" height="10" viewBox="0 0 24 24">
+                              <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+                                 fill="currentColor" />
+                           </svg>
+                        </span>
+                        <ul class="menu__sub-list">
+                           <li class="menu-item">
+                              <a class="menu__link" href="#">UX/UI Consultancy</a>
+                           </li>
+                        </ul>
                      </li>
                      <!--- current-menu-item current_page_item -->
                      <li class="menu-item">
@@ -66,112 +80,6 @@
             </nav>
          </div>
          <a class="header__lets-talk button" href="#">Let’s talk</a>
-      </div>
-      <div class="header__burger-menu">
-         <button id="close-menu" class="header__close-menu" type="button">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-               <path d="M17.125 1L0.875 17.25M0.875 1L17.125 17.25" stroke="white" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-         </button>
-         <div class="header__burger-menu-items">
-            <div class="header__burger-menu-item">
-               <div class="header__burger-menu-topmenu-container">
-                  <nav class="header__burger-menu-body">
-                     <ul class="menu__list">
-                        <li class="menu-item current-menu-item current_page_item">
-                           <a class="menu__link" href="/">Main</a>
-                        </li>
-                        <li class="menu-item">
-                           <a class="menu__link" href="about.html">About</a>
-                        </li>
-                        <!--- menu-item-has-children current-menu-item current_page_item -->
-                        <li class="menu-item menu-item-has-children">
-                           <a class="menu__link" href="portfolio.html">Portfolio</a>
-                           <span class="menu__arrow">
-                              <svg width="10" height="10" viewBox="0 0 24 24">
-                                 <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
-                                    fill="currentColor" />
-                              </svg>
-                           </span>
-                           <ul class="menu__sub-list">
-                              <li class="menu-item">
-                                 <a class="menu__link" href="#">Sub link 1</a>
-                              </li>
-                              <li class="menu-item current-menu-item current_page_item">
-                                 <a class="menu__link" href="#">Sub link 2</a>
-                              </li>
-                              <li class="menu-item">
-                                 <a class="menu__link" href="#">Sub link 3</a>
-                              </li>
-                              <li class="menu-item">
-                                 <a class="menu__link" href="#">Sub link 4</a>
-                              </li>
-                           </ul>
-                        </li>
-                        <li class="menu-item">
-                           <a class="menu__link" href="servises.html">Servises</a>
-                        </li>
-                        <!--- current-menu-item current_page_item -->
-                        <li class="menu-item">
-                           <a class="menu__link" href="archive.html">Archive</a>
-                        </li>
-                     </ul>
-                  </nav>
-               </div>
-            </div>
-            <div class="header__burger-menu-item">
-               <div class="select-language select">
-                  <div class="select-language__header select__header">
-                     <span class="select__current">English</span>
-                  </div>
-                  <div class="select-language__body select__body">
-                     <div class="select-language__item select__item current-lang">English</div>
-                     <div class="select-language__item select__item">Russian</div>
-                     <div class="select-language__item select__item">Ukraine</div>
-                  </div>
-               </div>
-               <h3 class="menu__title-above-list">Get In Touch</h3>
-               <ul class="contact__list">
-                  <li class="contact__listItem">
-                     <svg width="26" height="20" viewBox="0 0 26 20" fill="none">
-                        <path
-                           d="M21.5721 0C23.4823 0 25.0303 1.54792 25.0303 3.45813V16.3026C25.0303 18.2128 23.4823 19.7607 21.5721 19.7607H3.45813C2.54098 19.7607 1.66139 19.3964 1.01286 18.7479C0.364338 18.0994 0 17.2198 0 16.3026V3.45813C0 1.54792 1.54792 0 3.45813 0H21.5721ZM23.3835 6.15942L12.9117 11.919C12.8039 11.9783 12.6843 12.0126 12.5615 12.0196C12.4388 12.0265 12.316 12.0059 12.2023 11.9592L12.1186 11.9197L1.64673 6.15876V16.3026C1.64673 16.783 1.83757 17.2438 2.17728 17.5835C2.51698 17.9232 2.97772 18.114 3.45813 18.114H21.5721C22.0526 18.114 22.5133 17.9232 22.853 17.5835C23.1927 17.2438 23.3835 16.783 23.3835 16.3026V6.15942ZM21.5721 1.64673H3.45813C2.97772 1.64673 2.51698 1.83757 2.17728 2.17728C1.83757 2.51698 1.64673 2.97772 1.64673 3.45813V4.28084L12.5151 10.2578L23.3835 4.28018V3.45813C23.3835 2.97772 23.1927 2.51698 22.853 2.17728C22.5133 1.83757 22.0526 1.64673 21.5721 1.64673Z"
-                           fill="#C9C9C9" />
-                     </svg>
-                     <a href="mailto:diakovoleksandr@gmail.com">diakovoleksandr@gmail.com</a>
-                  </li>
-                  <li class="contact__listItem">
-                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
-                        <path
-                           d="M10.5664 5.74283L6.78313 1.37577C6.34698 0.872518 5.54738 0.874755 5.04077 1.38248L1.92959 4.49925C1.00361 5.42634 0.738571 6.80301 1.27425 7.90679C4.47447 14.5328 9.81832 19.8842 16.4399 23.0937C17.5426 23.6293 18.9181 23.3643 19.8441 22.4372L22.9843 19.2914C23.4932 18.7825 23.4943 17.9784 22.9866 17.5423L18.6027 13.7791C18.1442 13.3855 17.4318 13.4369 16.9722 13.8977L15.4468 15.4253C15.3687 15.5071 15.2659 15.5611 15.1542 15.5789C15.0425 15.5967 14.928 15.5773 14.8284 15.5237C12.335 14.0879 10.2667 12.0169 8.83414 9.52166C8.78049 9.42185 8.76106 9.30719 8.77884 9.19528C8.79662 9.08337 8.85062 8.98038 8.93255 8.9021L10.4535 7.38006C10.9142 6.91707 10.9646 6.20135 10.5664 5.74171V5.74283Z"
-                           stroke="#C9C9C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                     </svg>
-                     <a href="tel:+380664246737">+38 (066) 42-46-737</a>
-                  </li>
-                  <li class="contact__listItem">
-                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                        <path
-                           d="M20.5592 10.2016C20.5592 8.06776 19.7115 6.02129 18.2026 4.51241C16.6937 3.00354 14.6473 2.15587 12.5134 2.15587C10.3795 2.15587 8.33305 3.00354 6.82418 4.51241C5.31531 6.02129 4.46763 8.06776 4.46763 10.2016C4.46763 13.5022 7.10843 17.804 12.5134 22.9568C17.9184 17.804 20.5592 13.5022 20.5592 10.2016ZM12.5134 25.3992C5.95699 19.4399 2.67969 14.3729 2.67969 10.2016C2.67969 7.59356 3.71574 5.09232 5.55991 3.24815C7.40409 1.40397 9.90533 0.36792 12.5134 0.36792C15.1215 0.36792 17.6227 1.40397 19.4669 3.24815C21.3111 5.09232 22.3471 7.59356 22.3471 10.2016C22.3471 14.3729 19.0698 19.4399 12.5134 25.3992Z"
-                           fill="#C9C9C9" />
-                        <path
-                           d="M12.5156 11.095C12.9898 11.095 13.4446 10.9067 13.7799 10.5714C14.1152 10.2361 14.3036 9.78129 14.3036 9.30709C14.3036 8.8329 14.1152 8.37813 13.7799 8.04283C13.4446 7.70752 12.9898 7.51915 12.5156 7.51915C12.0414 7.51915 11.5867 7.70752 11.2514 8.04283C10.9161 8.37813 10.7277 8.8329 10.7277 9.30709C10.7277 9.78129 10.9161 10.2361 11.2514 10.5714C11.5867 10.9067 12.0414 11.095 12.5156 11.095ZM12.5156 12.883C11.5672 12.883 10.6577 12.5062 9.98709 11.8356C9.31648 11.165 8.93973 10.2555 8.93973 9.30709C8.93973 8.35871 9.31648 7.44917 9.98709 6.77856C10.6577 6.10795 11.5672 5.7312 12.5156 5.7312C13.464 5.7312 14.3736 6.10795 15.0442 6.77856C15.7148 7.44917 16.0915 8.35871 16.0915 9.30709C16.0915 10.2555 15.7148 11.165 15.0442 11.8356C14.3736 12.5062 13.464 12.883 12.5156 12.883ZM22.1705 18.2468L25.0312 25.3986H16.9855V23.6107H8.04576V25.3986H0L2.86071 18.2468H22.1705ZM20.2449 18.2468H4.78633L2.6408 23.6107H22.3905L20.2449 18.2468Z"
-                           fill="#C9C9C9" />
-                     </svg>
-                     <address>Sportyvna Square, 1a, Kyiv, 01023</address>
-                  </li>
-               </ul>
-               <div class="contact__wrap-socials">
-                  <h3 class="contact__title-above-social">Follow Me</h3>
-                  <span class="contact__socials-hyphen"> — </span>
-                  <div class="footer__wrap-social-links">
-                     <span data-url="#" class="footer__social-link hidden-link">Bh.</span>
-                     <span data-url="#" class="footer__social-link hidden-link">In.</span>
-                     <span data-url="#" class="footer__social-link hidden-link">Tg.</span>
-                  </div>
-               </div>
-            </div>
-         </div>
       </div>
    </div>
 </header>
@@ -436,9 +344,12 @@
    </div>
 </footer>
    </div>
-   <script src="files/js/contact-form.js?_v=20230112221237"></script>
-   <script src="js/script.min.js?_v=20230112221237"></script>
-   <script src="files/js/gsap.min.js?_v=20230112221237"></script>
+   <script src="files/js/contact-form.js?_v=20230117164937"></script>
+   <script src="js/script.min.js?_v=20230117164937"></script>
+   <script src="files/js/gsap.min.js?_v=20230117164937"></script>
+
+   <script src="files/js/jquery-3.6.1.min.js?_v=20230117164937"></script>
+   <script src="files/js/logo-in-img-to-svg.js?_v=20230117164937"></script>
 </body>
 
 </html>
