@@ -4,8 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230120233920">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230120233920">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230121194400">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230121194400">
    <title>Portfolio</title>
 </head>
 
@@ -31,7 +31,7 @@
                         <a class="menu__link" href="about.html">About</a>
                      </li>
                      <!--- menu-item-has-children current-menu-item current_page_item -->
-                     <li class="menu-item menu-item-has-children">
+                     <li class="menu-item current-menu-item current_page_item menu-item-has-children">
                         <a class="menu__link" href="portfolio.html">Portfolio</a>
                         <span class="menu__arrow">
                            <svg width="10" height="10" viewBox="0 0 24 24">
@@ -276,18 +276,18 @@
 
          <div id="work_1" class="popup">
             <!-- popup-video -->
-            <div id="work_pause" class="popup__body popup-video">
+            <div id="work_1_pause" class="popup__body popup-video">
                <div class="popup__content">
                   <!-- popup__content-image -->
                   <!--<a href="" class="popup__close close-popup">X</a>-->
                   <video class="player" preload="none" crossorigin="" playsinline=""
                      data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
                      <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                        type="video/mp4" size="576">
+                        type="video/mp4" data-size="576">
                      <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                        type="video/mp4" size="720">
+                        type="video/mp4" data-size="720">
                      <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                        type="video/mp4" size="1080">
+                        type="video/mp4" data-size="1080">
                      <track kind="captions" label="English" srclang="en"
                         src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default="">
                      <track kind="captions" label="Français" srclang="fr"
@@ -300,18 +300,18 @@
          </div>
          <div id="work_2" class="popup">
             <!-- popup-video -->
-            <div class="popup__body popup-video">
+            <div id="work_2_pause" class="popup__body popup-video">
                <div class="popup__content">
                   <!-- popup__content-image -->
                   <!--<a href="" class="popup__close close-popup">X</a>-->
                   <video class="player" preload="none" crossorigin="" playsinline=""
                      data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
                      <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                        type="video/mp4" size="576">
+                        type="video/mp4" data-size="576">
                      <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                        type="video/mp4" size="720">
+                        type="video/mp4" data-size="720">
                      <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                        type="video/mp4" size="1080">
+                        type="video/mp4" data-size="1080">
                      <track kind="captions" label="English" srclang="en"
                         src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default="">
                      <track kind="captions" label="Français" srclang="fr"
@@ -324,18 +324,18 @@
          </div>
          <div id="work_3" class="popup">
             <!-- popup-video -->
-            <div class="popup__body popup-video">
+            <div id="work_3_pause" class="popup__body popup-video">
                <div class="popup__content">
                   <!-- popup__content-image -->
                   <!--<a href="" class="popup__close close-popup">X</a>-->
                   <video class="player" preload="none" crossorigin="" playsinline=""
                      data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
                      <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                        type="video/mp4" size="576">
+                        type="video/mp4" data-size="576">
                      <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                        type="video/mp4" size="720">
+                        type="video/mp4" data-size="720">
                      <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                        type="video/mp4" size="1080">
+                        type="video/mp4" data-size="1080">
                      <track kind="captions" label="English" srclang="en"
                         src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default="">
                      <track kind="captions" label="Français" srclang="fr"
@@ -453,14 +453,34 @@
    </div>
 </footer>
    </div>
-   <script src="js/script.min.js?_v=20230120233920"></script>
-   <script src="files/js/plyr.min.js?_v=20230120233920"></script>
-   <script src="files/js/gsap.min.js?_v=20230120233920"></script>
-   <script src="files/swiper/js/swiper-bundle.min.js?_v=20230120233920"></script>
-   <script src="files/swiper/js/portfolio-settings.js?_v=20230120233920"></script>
+   <script src="js/script.min.js?_v=20230121194400"></script>
+   <script src="files/js/plyr.min.js?_v=20230121194400"></script>
+   <script src="files/js/gsap.min.js?_v=20230121194400"></script>
+   <script src="files/swiper/js/swiper-bundle.min.js?_v=20230121194400"></script>
+   <script src="files/swiper/js/portfolio-settings.js?_v=20230121194400"></script>
 
-   <script src="files/js/jquery-3.6.1.min.js?_v=20230120233920"></script>
-   <script src="files/js/logo-in-img-to-svg.js?_v=20230120233920"></script>
+   <script src="files/js/jquery-3.6.1.min.js?_v=20230121194400"></script>
+   <script src="files/js/logo-in-img-to-svg.js?_v=20230121194400"></script>
+   <script>
+      const popupBody_1 = document.getElementById('work_1_pause');
+      popupBody_1.addEventListener('click', function (e) {
+         if (this === e.target) {
+            document.querySelector('#work_1_pause .player').pause();
+         }
+      });
+      const popupBody_2 = document.getElementById('work_2_pause');
+      popupBody_2.addEventListener('click', function (e) {
+         if (this === e.target) {
+            document.querySelector('#work_2_pause .player').pause();
+         }
+      });
+      const popupBody_3 = document.getElementById('work_3_pause');
+      popupBody_3.addEventListener('click', function (e) {
+         if (this === e.target) {
+            document.querySelector('#work_3_pause .player').pause();
+         }
+      });
+   </script>
 </body>
 
 </html>

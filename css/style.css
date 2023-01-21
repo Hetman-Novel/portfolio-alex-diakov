@@ -6682,7 +6682,7 @@ body.dark .wrap-post-pagination .nav-links .page-numbers.current {
   }
 
   .header .menu__list li a {
-    color: inherit;
+    color: inherit !important;
   }
 
   .header .menu__list > li {
@@ -8195,42 +8195,14 @@ body.dark .wrap-post-pagination .nav-links .page-numbers.current {
     display: flex;
     flex-wrap: wrap;
     opacity: 0;
-    transition: transform 0.6s, opacity 0.3s;
+    transition: transform 0.5s, opacity 0.5s;
     transform: translateY(20px);
     transition-delay: 0s;
-    /*&:nth-child(2) {
-       transition-delay: 0.3s;
-    }
-    &:nth-child(3) {
-       transition-delay: 0.6s;
-    }
-    &:nth-child(4) {
-       transition-delay: 0.9s;
-    }
-    &:nth-child(5) {
-       transition-delay: 1.2s;
-    }
-    &:nth-child(6) {
-       transition-delay: 1.5s;
-    }
-    &:nth-child(7) {
-       transition-delay: 1.8s;
-    }
-    &:nth-child(8) {
-       transition-delay: 2.1s;
-    }
-    &:nth-child(9) {
-       transition-delay: 2.4s;
-    }
-    &:nth-child(10) {
-       transition-delay: 2.7s;
-    }
-    &:nth-child(11) {
-       transition-delay: 3.0s;
-    }
-    &:nth-child(12) {
-       transition-delay: 3.3s;
-    }*/
+  }
+
+  .header .menu__list > li.current-menu-item,
+  .header .menu__list > li.current_page_item {
+    color: #d90a2c;
   }
 
   .header .menu__list > li:not(:last-child) {
@@ -8261,6 +8233,11 @@ body.dark .wrap-post-pagination .nav-links .page-numbers.current {
   .header .menu__sub-list li {
     font-size: 24px;
     line-height: 28px;
+  }
+
+  .header .menu__sub-list li.current-menu-item,
+  .header .menu__sub-list li.current_page_item {
+    color: #d90a2c;
   }
 
   .header .menu__sub-list li:not(:last-child) {
