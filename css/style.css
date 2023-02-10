@@ -1729,7 +1729,6 @@ body.lock {
   line-height: 24px;
   letter-spacing: -0.025em;
   position: relative;
-  mix-blend-mode: darken;
 }
 
 .follow-me__text {
@@ -3330,6 +3329,23 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 /* Page - Archive */
+
+.front-page .archive__blockImage:hover {
+  opacity: 0.4;
+}
+
+.front-page .archive__blockImage::after {
+  background-color: #d90a2c;
+  content: "";
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s ease 0s;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
 
 .page-archive {
   background-color: #15151D;
@@ -9364,6 +9380,10 @@ body.dark .wrap-post-pagination .nav-links .page-numbers.current {
 
   .wrap-back-top-and-color-and-select-language .wrap-back-top:hover .progress-bar {
     background-color: #d90a2c;
+  }
+
+  .wrap-follow-me.light-typo .follow-me__social-link:hover {
+    color: #D90A2C !important;
   }
 
   .hidden-link:hover,
